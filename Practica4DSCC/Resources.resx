@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NinaB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NinaB.tinyfnt;System.Byte[], mscorlib, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\small.tinyfnt;System.Byte[], mscorlib, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="pantallaTemperatura" xml:space="preserve">
+    <value>&lt;Glide Version="1.0.7"&gt;
+  &lt;Window Name="Clima" Width="320" Height="240" BackColor="D4F5F3"&gt;
+    &lt;TextBlock Name="instance353" X="103" Y="24" Width="100" Height="32" Alpha="255" Text="Clima " TextAlign="center" TextVerticalAlign="Top" Font="6" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
+    &lt;TextBlock Name="instance844" X="59" Y="105" Width="250" Height="32" Alpha="255" Text="Temperatura en Celsius:" TextAlign="Left" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
+    &lt;Button Name="atras" X="113" Y="197" Width="80" Height="32" Alpha="255" Text="Regresar" Font="4" FontColor="B56918" DisabledFontColor="808080" TintColor="C4B19D" TintAmount="0"/&gt;
+    &lt;TextBlock Name="msm" X="42" Y="62" Width="230" Height="25" Alpha="255" Text="" TextAlign="center" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="7FDED8" ShowBackColor="True"/&gt;
+    &lt;TextBlock Name="temp" X="133" Y="138" Width="50" Height="25" Alpha="255" Text="" TextAlign="center" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="7FDED8" ShowBackColor="True"/&gt;
+  &lt;/Window&gt;
+&lt;/Glide&gt;</value>
+    <comment>Pantalla para la temperatura :)</comment>
+  </data>
+  <data name="pantallaNoticias" xml:space="preserve">
+    <value>&lt;Glide Version="1.0.7"&gt;
+  &lt;Window Name="Noticias" Width="320" Height="240" BackColor="93F8AE"&gt;
+    &lt;TextBlock Name="instance353" X="36" Y="6" Width="230" Height="25" Alpha="255" Text="Noticias Recientes" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
+    &lt;TextBlock Name="labeld" X="13" Y="31" Width="75" Height="22" Alpha="255" Text="Deportes" TextAlign="Left" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="E68383" ShowBackColor="false"/&gt;
+    &lt;TextBlock Name="labelc" X="113" Y="31" Width="80" Height="22" Alpha="255" Text="Cine y TV" TextAlign="Left" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="E68383" ShowBackColor="false"/&gt;
+    &lt;TextBlock Name="labele" X="216" Y="31" Width="100" Height="22" Alpha="255" Text="Economia" TextAlign="Left" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="E68383" ShowBackColor="false"/&gt;
+    &lt;Button Name="deportes" X="19" Y="57" Width="50" Height="32" Alpha="255" Text="ver" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+    &lt;Button Name="cine" X="122" Y="58" Width="50" Height="32" Alpha="255" Text="ver" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+    &lt;Button Name="economia" X="222" Y="58" Width="50" Height="32" Alpha="255" Text="ver" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+    &lt;TextBlock Name="n1" X="13" Y="94" Width="290" Height="36" Alpha="255" Text="" TextAlign="center" TextVerticalAlign="Top" Font="2" FontColor="0" BackColor="F0E9E5" ShowBackColor="True"/&gt;
+    &lt;TextBlock Name="n2" X="14" Y="135" Width="290" Height="36" Alpha="255" Text="" TextAlign="center" TextVerticalAlign="Top" Font="2" FontColor="0" BackColor="F0E9E5" ShowBackColor="True"/&gt;
+    &lt;Button Name="atrasnews" X="119" Y="206" Width="80" Height="32" Alpha="255" Text="atras" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+    &lt;Button Name="back" X="13" Y="175" Width="80" Height="32" Alpha="255" Text="&amp;lt;----" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+    &lt;Button Name="next" X="229" Y="177" Width="80" Height="32" Alpha="255" Text="----&gt;" Font="4" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/&gt;
+  &lt;/Window&gt;
+&lt;/Glide&gt;</value>
+    <comment>pantalla news</comment>
+  </data>
+  <data name="pantallaTiempo" xml:space="preserve">
+    <value>&lt;Glide Version="1.0.7"&gt;
+  &lt;Window Name="instance115" Width="320" Height="240" BackColor="A8CDE9"&gt;
+    &lt;Button Name="noticias" X="51" Y="189" Width="80" Height="32" Alpha="255" Text="Noticias" Font="4" FontColor="B56918" DisabledFontColor="808080" TintColor="C4B19D" TintAmount="0"/&gt;
+    &lt;TextBlock Name="temperatura" X="80" Y="14" Width="170" Height="30" Alpha="255" Text="Reloj Gadgeteer" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
+    &lt;TextBlock Name="hora" X="35" Y="130" Width="250" Height="30" Alpha="255" Text="Esperando..." TextAlign="center" TextVerticalAlign="Top" Font="6" FontColor="0" BackColor="7ACBCA" ShowBackColor="True"/&gt;
+    &lt;TextBlock Name="fecha" X="37" Y="67" Width="250" Height="30" Alpha="255" Text="Esperando..." TextAlign="center" TextVerticalAlign="Top" Font="6" FontColor="0" BackColor="7ACBCA" ShowBackColor="True"/&gt;
+    &lt;TextBlock Name="instance11723" X="108" Y="39" Width="100" Height="25" Alpha="255" Text="Fecha" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="B56918" ShowBackColor="False"/&gt;
+    &lt;TextBlock Name="instance12549" X="38" Y="104" Width="250" Height="25" Alpha="255" Text="Hora Actual De Guayaquil" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="0" ShowBackColor="False"/&gt;
+    &lt;Button Name="clima" X="192" Y="191" Width="80" Height="32" Alpha="255" Text="Clima" Font="4" FontColor="B56918" DisabledFontColor="808080" TintColor="C4B19D" TintAmount="0"/&gt;
+    &lt;TextBlock Name="text_net_status" X="0" Y="0" Width="100" Height="25" Alpha="255" Text="No Network" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
+  &lt;/Window&gt;
+&lt;/Glide&gt;</value>
+    <comment>pantalla tiempo</comment>
+  </data>
+</root>
