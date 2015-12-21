@@ -59,17 +59,18 @@ namespace Practica4DSCC
         private Button back;
         private Button next;
 
-        String[] s2 = new String[30];
+        String[] s2 = new String[15];
         String respuesta = "";
         Double tiempo = 0;
         String opcion = "";
         int intnoticias = 0;
-            private const string consignos = "áàäéèëíìïóòöúùuÁÀÄÉÈËÍÌÏÓÒÖÚÙÜçÇ‘’";
-        private const string sinsignos = "aaaeeeiiiooouuuAAAEEEIIIOOOUUUcC''";
+        int ix = 0;
+            private const string consignos = "áàäéèëíìïóòöúùuÁÀÄÉÈËÍÌÏÓÒÖÚÙÜçÇ‘’ñÑ";
+        private const string sinsignos = "aaaeeeiiiooouuuAAAEEEIIIOOOUUUcC''nN";
 
         GT.Timer timer = new GT.Timer(1000); // every second (1000ms)
 
-        GT.Timer timer2 = new GT.Timer(1000); // every second (1000ms)
+        GT.Timer timer2 = new GT.Timer(900); // every second (1000ms)
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
@@ -107,7 +108,7 @@ namespace Practica4DSCC
             economia = (Button)pantallaNoticias.GetChildByName("economia");
             atrastemp = (Button)pantallaTemperatura.GetChildByName("atras");
             atrasnews = (Button)pantallaNoticias.GetChildByName("atrasnews");
-            texto = (TextBlock)pantallaTiempo.GetChildByName("text_net_status");
+            //texto = (TextBlock)pantallaTiempo.GetChildByName("text_net_status");
             textotemp = (TextBlock)pantallaTiempo.GetChildByName("hora");
             fechatext = (TextBlock)pantallaTiempo.GetChildByName("fecha");
             msm = (TextBlock)pantallaTemperatura.GetChildByName("msm");
@@ -155,17 +156,24 @@ namespace Practica4DSCC
         }
         void next_TapEvent(object sender)
         {
-            if (intnoticias < 29)
+            if (intnoticias < 10 && intnoticias<ix+1)
             {
                 intnoticias = intnoticias + 2;
                 n1.Text = removerAcentos(s2[intnoticias]);
                 n2.Text = removerAcentos(s2[intnoticias + 1]);
+                Debug.Print(removerAcentos(s2[intnoticias]));
+                Debug.Print(removerAcentos(s2[intnoticias + 1]));
+            }
+            else
+            {
+                intnoticias = 0;
+
             }
         }
 
         void back_TapEvent(object sender)
         {
-            if (intnoticias > 1 && intnoticias <29)
+            if (intnoticias > 1 && intnoticias <10)
             {
                 intnoticias = intnoticias - 2;
                 n1.Text = removerAcentos(s2[intnoticias]);
@@ -215,8 +223,11 @@ namespace Practica4DSCC
         {
 
             Debug.Print("news");
+            HttpRequest request = HttpHelper.CreateHttpGetRequest("http://www.eluniverso.com/rss/deportes.xml");
+            request.ResponseReceived += request_ResponseReceived;
+            request.SendRequest();
             opcion = "noticias";
-            labeld.ShowBackColor = false;
+            labeld.ShowBackColor = true;
             labele.ShowBackColor = false;
             labelc.ShowBackColor = false;
             pantalla = pantallaNoticias;
@@ -250,7 +261,7 @@ namespace Practica4DSCC
         {
             tiempo = tiempo + 1;
             respuesta = UnixTimeStampToDateTime(tiempo);
-            Debug.Print(respuesta);
+      
             // btn_inicio.Text = respuesta;
 
             String[] res = respuesta.Split(' ');
@@ -282,17 +293,23 @@ namespace Practica4DSCC
      
         public string removerAcentos(String texto)
         {
-            StringBuilder textoSinAcentos = new StringBuilder(texto.Length);
-            int indexConAcento;
-            foreach (char caracter in texto)
+            if (!texto.Equals("") && (texto != null) && (!texto.Length.Equals(null)))
             {
-                indexConAcento = consignos.IndexOf(caracter);
-                if (indexConAcento > -1)
-                    textoSinAcentos.Append(sinsignos.Substring(indexConAcento, 1));
-                else
-                    textoSinAcentos.Append(caracter);
+                StringBuilder textoSinAcentos = new StringBuilder(texto.Length);
+                int indexConAcento;
+                foreach (char caracter in texto)
+                {
+                    indexConAcento = consignos.IndexOf(caracter);
+                    if (indexConAcento > -1)
+                        textoSinAcentos.Append(sinsignos.Substring(indexConAcento, 1));
+                    else
+                        textoSinAcentos.Append(caracter);
+                }
+                return textoSinAcentos.ToString();
             }
-            return textoSinAcentos.ToString();
+            else {
+                ix = 0;
+                return ""; }
         }
         void request_ResponseReceived(HttpRequest sender, HttpResponse response)
         {
@@ -369,17 +386,17 @@ namespace Practica4DSCC
                         if ((rssXmlDoc.NodeType == XmlNodeType.Element) && (rssXmlDoc.Name == "item"))
                         { 
                             intnoticias=0;
-                            int i = 0;
+                            ix = 0;
                             while (rssXmlDoc.Read())
                             {
                                
                                 if ((rssXmlDoc.NodeType == XmlNodeType.Element) && (rssXmlDoc.Name == "title"))
                                 {
-                                    if (i < 15)
+                                    if (ix < 10)
                                     {
-                                        s2[i] = rssXmlDoc.ReadElementString();
+                                        s2[ix] = rssXmlDoc.ReadElementString();
 
-                                        i++;
+                                        ix++;
                                     }
                                 }
 
@@ -406,7 +423,7 @@ namespace Practica4DSCC
         {
     
             ip = ethernetJ11D.NetworkSettings.IPAddress;
-            texto.Text = ip;
+            //texto.Text = ip;
             tiempox();
             btn_news.Enabled = true;
             btn_temperature.Enabled = true;
@@ -417,7 +434,7 @@ namespace Practica4DSCC
         void ethernetJ11D_NetworkDown(GTM.Module.NetworkModule sender, GTM.Module.NetworkModule.NetworkState state)
         {
             Debug.Print("Desconectado");
-            texto.Text = "No Network";
+            //texto.Text = "No Network";
             timer.Stop();
             btn_news.Enabled = false;
             btn_temperature.Enabled = false;

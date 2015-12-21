@@ -165,7 +165,6 @@
     &lt;TextBlock Name="instance11723" X="108" Y="39" Width="100" Height="25" Alpha="255" Text="Fecha" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="B56918" ShowBackColor="False"/&gt;
     &lt;TextBlock Name="instance12549" X="38" Y="104" Width="250" Height="25" Alpha="255" Text="Hora Actual De Guayaquil" TextAlign="center" TextVerticalAlign="Top" Font="5" FontColor="0" BackColor="0" ShowBackColor="False"/&gt;
     &lt;Button Name="clima" X="192" Y="191" Width="80" Height="32" Alpha="255" Text="Clima" Font="4" FontColor="B56918" DisabledFontColor="808080" TintColor="C4B19D" TintAmount="0"/&gt;
-    &lt;TextBlock Name="text_net_status" X="0" Y="0" Width="100" Height="25" Alpha="255" Text="No Network" TextAlign="Left" TextVerticalAlign="Top" Font="4" FontColor="0" BackColor="000000" ShowBackColor="False"/&gt;
   &lt;/Window&gt;
 &lt;/Glide&gt;</value>
     <comment>pantalla tiempo</comment>
