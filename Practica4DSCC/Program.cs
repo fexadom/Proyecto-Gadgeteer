@@ -246,8 +246,8 @@ namespace Practica4DSCC
             pantalla = pantallaTemperatura;
             Debug.Print("temperature");
 
-         
-            HttpRequest request = HttpHelper.CreateHttpGetRequest("http://api.openweathermap.org/data/2.5/weather?q=Guayaquil&mode=xml&appid=2de143494c0b295cca9337e1e96b00e0&lang=es");
+
+            HttpRequest request = HttpHelper.CreateHttpGetRequest("http://api.openweathermap.org/data/2.5/weather?q=Guayaquil&mode=xml&appid=d3fb3b8eb0730860e148d39896bc1ee3&lang=es");
             request.ResponseReceived += request_ResponseReceived;
             request.SendRequest();
             opcion = "temperatura";
